@@ -1,4 +1,3 @@
-import React from 'react'
 import "./Payment.css"
 import { Link } from 'react-router-dom'
 import { FaCcVisa } from "react-icons/fa";
@@ -15,14 +14,12 @@ const Payment = () => {
                 <li>
                   <Link to="/address">Address</Link>
                   <AiOutlineRight />
-
                 </li>
                 <li>
                   <Link to="/shipping" >
                     Shipping
                   </Link>
                   <AiOutlineRight />
-
                 </li>
                 <li>
                   <Link to="/payment" className="active">Payment</Link>

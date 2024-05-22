@@ -6,6 +6,7 @@ import Shipping from './componets/Shipping/Shipping'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Payment from './componets/Payment/Payment'
 import Address from './componets/Address/Address'
+import Cart from './componets/cart/Cart'
 
 function App() {
 const router = createBrowserRouter([
@@ -20,6 +21,9 @@ const router = createBrowserRouter([
   },
   {
     path: '/address' , element: <Address />
+  },
+  {
+    path: '/cart' , element: <Cart />
   }
 ])
   return (

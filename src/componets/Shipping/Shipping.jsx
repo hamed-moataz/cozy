@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./Shipping.css";
-import React from "react";
 import { AiOutlineRight } from "react-icons/ai";
 
 const Shipping = () => {
@@ -65,6 +64,7 @@ const Shipping = () => {
                   </select>
                 </div>
               </div>
+
             </div>
           </div>
           <div className="right-shipping">

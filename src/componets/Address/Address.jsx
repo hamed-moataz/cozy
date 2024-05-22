@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaCcVisa } from "react-icons/fa";
 import { AiOutlineRight } from "react-icons/ai";
@@ -14,7 +13,6 @@ const Address = () => {
              <li>
                <Link to="/address">Address</Link>
                <AiOutlineRight />
-
              </li>
              <li>
                <Link to="/shipping" >
