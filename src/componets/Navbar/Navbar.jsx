@@ -26,7 +26,9 @@ const Navbar = () => {
         <div className="icons">
           <ul>
             <li>
-              <FiShoppingCart />
+              <FiShoppingCart onClick={()=>{
+                location="/cart"
+              }} />
             </li>
             <li>
               <IoSearch />

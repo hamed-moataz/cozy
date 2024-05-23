@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Shipping.css";
-import React from "react";
+import React, { useContext } from "react";
 import { AiOutlineRight } from "react-icons/ai";
+import Order from "../Order";
+import { CounterProvider } from "../stor/Counter";
 
 const Shipping = () => {
+  let {total} = useContext(CounterProvider)
   return (
     <section>
       <div className="container">
@@ -68,7 +71,7 @@ const Shipping = () => {
             </div>
           </div>
           <div className="right-shipping">
-            <div className="order">
+            {/* <div className="order">
               <h2>Order Summary</h2>
               <div className="detils">
                 <div className="left-detils">
@@ -98,10 +101,11 @@ const Shipping = () => {
                 </div>
                 <div className="input">
                   <input type="text" placeholder="Coupon Code" />
-                  <button className="btn">Continue to Payment</button>
+                  <Link to='/payment'><button className="btn">Continue to Payment</button></Link>
                 </div>
               </div>
-            </div>
+            </div> */}
+         <Order total = {total} location={"/payment"} />
           </div>
         </div>
       </div>
