@@ -5,10 +5,11 @@ import CartContext from '../../Features/cartContext';
 import "./cart.css";
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const URL = "http://localhost:3000/products";
-  
+
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get(URL).then(products => setProducts(products.data));
@@ -108,7 +109,7 @@ const Cart = () => {
               <input type="text" placeholder='Coupon Code' className='input'/>
               <RiCouponLine />
             </div>
-            <button className='btn'>Proceed to Checkout</button>
+            <Link to="/address" className='btn'>Proceed to Checkout</Link>
           </div>
         </div>
       </div>
