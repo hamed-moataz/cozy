@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import "./Home.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { FaStar } from "react-icons/fa6";
@@ -8,7 +8,6 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { TiSocialPinterestCircular } from "react-icons/ti";
 
-
 import img_1 from "../../assets/images/1.png"
 import img_2 from "../../assets/images/2.jpg"
 import img_3 from "../../assets/images/3.jpg"
@@ -16,9 +15,18 @@ import img_4 from "../../assets/images/4.jpg"
 import img_5 from "../../assets/images/5.jpg"
 import img_6 from "../../assets/images/6.png"
 
-
+const Images = [img_1,img_2,img_3,img_4,img_5,img_6]
 
 const Home = () => {
+  const [image, setImage] = useState(0)
+  useEffect(() => {
+   const interval =  setInterval(() => {
+      setImage(prev => (prev + 1) % Images.length)
+    }, 3000);
+    return ()=> clearInterval(interval)
+
+  }, [Images.length])
+  
   return (
     <section className="main-home">
       <div className="container">
@@ -79,7 +87,7 @@ const Home = () => {
             </div>
             <div className="right-home">
               <img
-                src={img_1}
+                src={Images[image]}
                 alt=""
               />
               <div className="list-img">

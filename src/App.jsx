@@ -7,6 +7,8 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Payment from './componets/Payment/Payment'
 import Address from './componets/Address/Address'
 import Cart from './componets/cart/Cart'
+import {CartProvider} from './Features/cartContext'
+
 
 function App() {
 const router = createBrowserRouter([
@@ -26,11 +28,13 @@ const router = createBrowserRouter([
     path: '/cart' , element: <Cart />
   }
 ])
+
   return (
-    <>
+    <CartProvider>
       <Navbar />
       <RouterProvider router={router} />
-    </>
+    </CartProvider>
+
   )
 }
 

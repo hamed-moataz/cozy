@@ -27,114 +27,117 @@
     max-width: 1536px;
   }
 }
-.g{
-display: grid;
+.g {
+  display: grid;
 }
-.col4{
-  grid-template-columns: repeat(4, minmax(0, 1fr)); 
+.col4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.colspan3{
+.colspan3 {
   grid-column: span 3 / span 3;
 }
-.colspan4{
+.colspan4 {
   grid-column: span 4 / span 4;
 }
-.col5{
+.col5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
-.f{
+.f {
   display: flex;
 }
-.fcol{
+.fcol {
   flex-direction: column;
 }
-.jl{
-justify-content: left;
+.jl {
+  justify-content: left;
 }
-.jaround{
+.jaround {
   justify-content: space-around;
 }
-.jc{
+.jc {
   justify-content: center;
 }
-.jend{
+.jend {
   justify-content: flex-end;
 }
-.jbetween{
+.jbetween {
   justify-content: space-between;
 }
-.alingC{
+.alingC {
   align-items: center;
 }
-.gap-3{
-  gap: 0.75rem
+.gap-3 {
+  gap: 0.75rem;
 }
-.gap-5{
+.gap-5 {
   gap: 1.25rem;
 }
-.pr-10{
-  padding-right: 2.5rem
+.pr-10 {
+  padding-right: 2.5rem;
 }
-.pt-7{
-  padding-top: 1.75rem
+.pt-7 {
+  padding-top: 1.75rem;
 }
-.pt-5{
+.pt-5 {
   padding-top: 1.25rem;
 }
-.p-2{
-  padding: 0.5rem
+.p-2 {
+  padding: 0.5rem;
 }
-.pb-10{
+.pb-10 {
   padding-bottom: 2.5rem;
 }
-.txtl{
+.txtl {
   text-align: left;
 }
-.border-gray{
-  border: 1px solid #d1d5db ;
+.border-gray {
+  border: 1px solid #d1d5db;
 }
-.pointer{
+.pointer {
   cursor: pointer;
 }
-.pointer:hover{
-  color:#d1d5db;
+.pointer:hover {
+  color: #d1d5db;
 }
-.txt20{
+.txt20 {
   font-size: 20px;
 }
-.txtred{
-  color:#ef4444;
+.txtred {
+  color: #ef4444;
 }
-.bold{
+.bold {
   font-weight: 600;
 }
-.notice{
+.notice {
   width: fit-content;
   background-color: #dcfce7;
-  color:#22c55e;
+  color: #22c55e;
 }
-.capital{
+.notice p {
+  margin: 0;
+}
+.capital {
   text-transform: capitalize;
 }
-.input{
+.input {
   outline: 2px solid transparent;
   outline-offset: 2px;
   border: none;
 }
-.btn{
-  background: #3aa29f ;
-  color:white;
+.btn {
+  background: #3aa29f;
+  color: white;
 }
 
-@media (max-width: 768px) { 
-  .leftSide{
+@media (max-width: 768px) {
+  .leftSide {
     grid-column: span 4 / span 4;
   }
-  .items{
+  .items {
     display: flex;
     flex-direction: column;
   }
-  .summary{
+  .summary {
     grid-column: span 4 / span 4;
   }
- }
+}

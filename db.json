@@ -1,0 +1,17 @@
+{
+  "products": [
+    { "id": "1","img":"./src/assets/images/item1.jpg", "title": "Osmond Armchair","price":149.99, "color": "Gunnared biege" },
+    { "id": "2","img":"./src/assets/images/item2.png", "title": "Meryl Lounge Chair","price":169.99, "color": "Lysed bright green" }
+  ],
+  "posts": [
+    { "id": "1", "title": "a title", "views": 100 },
+    { "id": "2", "title": "another title", "views": 200 }
+  ],
+  "comments": [
+    { "id": "1", "text": "a comment about post 1", "postId": "1" },
+    { "id": "2", "text": "another comment about post 1", "postId": "1" }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
