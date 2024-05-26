@@ -8,6 +8,7 @@ import axios from 'axios';
 
 const Cart = () => {
   const URL = "http://localhost:3000/products";
+  
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios.get(URL).then(products => setProducts(products.data));
