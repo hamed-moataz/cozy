@@ -1,9 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoSearch } from "react-icons/io5";
 import { FaBars } from "react-icons/fa6";
 import "./Navbar.css";
-
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +15,8 @@ const Navbar = () => {
           </h2>
         </div>
         <div className="links">
-          <ul className={menuOpen ? "open" : ""}>
-            <a>SHOP</a>
+          <ul  className={menuOpen ? "open" : ""}>
+            <li>SHOP</li>
             <li>COLLECTIVE</li>
             <li>DESIGNERS</li>
             <li>ABOUT US</li>
@@ -27,10 +26,9 @@ const Navbar = () => {
         <div className="icons">
           <ul>
             <li>
-              <a href="cart">
-
-              <FiShoppingCart />
-              </a>
+              <FiShoppingCart onClick={()=>{
+                location="/cart"
+              }} />
             </li>
             <li>
               <IoSearch />

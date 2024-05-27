@@ -94,10 +94,11 @@
   border: none;
   border: 1px solid #999;
 }
-.bottom-order .input .btn {
+.bottom-order .input a .btn {
   background: var(--mainColor);
   color: #fff;
   padding: 10px;
+  width: 100%;
 }
 
 

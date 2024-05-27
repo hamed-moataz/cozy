@@ -1,9 +1,13 @@
+import React, { useContext } from 'react'
 import "./Payment.css"
 import { Link } from 'react-router-dom'
 import { FaCcVisa } from "react-icons/fa";
 import { AiOutlineRight } from "react-icons/ai";
+import Order from '../Order';
+import { CounterProvider } from '../stor/Counter';
 
 const Payment = () => {
+  let {total} = useContext(CounterProvider)
   return (
     <section>
        <div className="container">
@@ -14,12 +18,14 @@ const Payment = () => {
                 <li>
                   <Link to="/address">Address</Link>
                   <AiOutlineRight />
+
                 </li>
                 <li>
                   <Link to="/shipping" >
                     Shipping
                   </Link>
                   <AiOutlineRight />
+
                 </li>
                 <li>
                   <Link to="/payment" className="active">Payment</Link>
@@ -55,40 +61,7 @@ const Payment = () => {
             </div>
           </div>
           <div className="right-shipping">
-            <div className="order">
-              <h2>Order Summary</h2>
-              <div className="detils">
-                <div className="left-detils">
-                  <p>Price</p>
-                  <p>Discount</p>
-                  <p>Shipping</p>
-                  <p>Coupon Applied</p>
-                </div>
-                <div className="right-detils">
-                  <p>$319.98</p>
-                  <p>$31.9</p>
-                  <p> Free</p>
-                  <p>$0.00</p>
-                </div>
-              </div>
-              <hr />
-              <div className="bottom-order">
-                <div className="total">
-                  <div className="left">
-                    <p>TOTAl</p>
-                    <p>Estimated Delivery by</p>
-                  </div>
-                  <div className="right">
-                    <p>$288.08</p>
-                    <p>01 Feb, 2023</p>
-                  </div>
-                </div>
-                <div className="input">
-                  <input type="text" placeholder="Coupon Code" />
-                  <button className="btn">Continue to Payment</button>
-                </div>
-              </div>
-            </div>
+            <Order total = {total} location={"/"} />
           </div>
         </div>
       </div>

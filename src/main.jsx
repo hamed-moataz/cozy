@@ -7,10 +7,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 
 
+
 import './index.css'
+import CounterContextProvider from './componets/stor/Counter.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <CounterContextProvider>
     <App />
-  </React.StrictMode>,
+  </CounterContextProvider>,
 )

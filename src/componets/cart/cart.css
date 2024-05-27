@@ -128,7 +128,14 @@
   background: #3aa29f;
   color: white;
 }
-
+.w100{
+  min-width: 900px;
+}
+@media (max-width: 1300px) {
+  .w100{
+    min-width: fit-content;
+  }
+}
 @media (max-width: 768px) {
   .leftSide {
     grid-column: span 4 / span 4;
@@ -139,5 +146,8 @@
   }
   .summary {
     grid-column: span 4 / span 4;
+  }
+  .w100{
+    min-width: fit-content;
   }
 }
